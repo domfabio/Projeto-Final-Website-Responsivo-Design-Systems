@@ -3,7 +3,7 @@
 Este é o projeto final do Curso de Desenvolvimento de Layout em Front-end da Mentorama: Design Systems, trata-se de um site criado para uma imobiliária, otimizado para as versões Mobile, Tablet e Desktop.
 
 ## 📸 Screenshots
-![Captura de tela](./screen/screen.png)
+![Captura de tela](./screen/screen.jpg)
 
 <br />
 
