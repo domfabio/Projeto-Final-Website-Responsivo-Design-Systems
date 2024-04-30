@@ -29,6 +29,7 @@ Cada obstáculo superado representou não apenas uma vitória, mas também um ma
 - Mobile First
 - Responsividade
 - Metodologia BEM
+- Flexbox
 - CSS Grid
 - Media Query
 - Variáveis CSS
@@ -37,4 +38,4 @@ Cada obstáculo superado representou não apenas uma vitória, mas também um ma
 
 ## 🔗 Projeto Hospedado no Vercel
 Este projeto está disponível para visualização online através do Vercel. <br />
-Você pode acessá-lo através do link: https://casa-la-luna.vercel.app/
+Você pode acessá-lo através do link: https://design-systems-iota.vercel.app/
