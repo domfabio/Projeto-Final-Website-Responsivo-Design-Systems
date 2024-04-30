@@ -2,10 +2,6 @@
 
 Este é o projeto final do Curso de Desenvolvimento de Layout em Front-end da Mentorama: Design Systems, trata-se de um site criado para uma imobiliária, otimizado para as versões Mobile, Tablet e Desktop.
 
-## 📸 Screenshots
-![Captura de tela](./screen/screen.png)
-
-<br />
 
 ## 👨🏾‍💻 Desafio do Projeto
  
@@ -15,14 +11,13 @@ Enfrentei uma jornada de desafios ao criar este projeto. A responsividade do sit
 
 Cada obstáculo superado representou não apenas uma vitória, mas também um marco em minha jornada de crescimento e aprendizado. Mesmo que a proposta inicial fosse desenvolver apenas duas versões, optei por ir além e criar uma terceira versão para desktop, como uma forma de aprimorar ainda mais minhas habilidades e colocar à prova meu comprometimento.
 
-<br />
+## 📸 Screenshots
+![Captura de tela](./screen/screen.png)
 
 ## 🚀 Tecnologias Utilizadas
 
 - HTML5
 - CSS3
-
-<br />
 
 ## 🏆 Aprendizado 
 
@@ -34,8 +29,11 @@ Cada obstáculo superado representou não apenas uma vitória, mas também um ma
 - Media Query
 - Variáveis CSS
 
-<br />
+## 🧠 Próximos Passos
+- Incluir no site animações com CSS e interações com JavaScript. 
+- Finalizar o Curso de JavaScript Mentorama.
 
 ## 🔗 Projeto Hospedado no Vercel
 Este projeto está disponível para visualização online através do Vercel. <br />
 Você pode acessá-lo através do link: https://design-systems-iota.vercel.app/
+
