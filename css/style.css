@@ -377,12 +377,12 @@ textarea {
     padding: 14px;
 }
 
-::-webkit-calendar-picker-indicator {
-    filter: invert(1);
+input[type=date]{
+    cursor: pointer;
 }
 
-input[type=date] {
-    cursor: pointer;
+input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }
 
 select {
