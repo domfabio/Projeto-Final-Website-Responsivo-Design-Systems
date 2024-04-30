@@ -2,7 +2,7 @@
 
 Este é o projeto final do Curso de Desenvolvimento de Layout em Front-end da Mentorama: Design Systems, trata-se de um site criado para uma imobiliária, otimizado para as versões Mobile, Tablet e Desktop.
 
-
+<br />
 ## 👨🏾‍💻 Desafio do Projeto
  
 Enfrentei uma jornada de desafios ao criar este projeto. A responsividade do site com Media Queries exigiu esforço em cada etapa. Porém, foi ao mergulhar no complexo mundo do CSS Grid, aplicando diferentes templates para cada versão, que me vi diante de um verdadeiro quebra-cabeça, desafiando minha criatividade e expertise.
@@ -14,11 +14,13 @@ Cada obstáculo superado representou não apenas uma vitória, mas também um ma
 ## 📸 Screenshots
 ![Captura de tela](./screen/screen.png)
 
+<br />
 ## 🚀 Tecnologias Utilizadas
 
 - HTML5
 - CSS3
 
+<br />
 ## 🏆 Aprendizado 
 
 - Mobile First
@@ -29,9 +31,13 @@ Cada obstáculo superado representou não apenas uma vitória, mas também um ma
 - Media Query
 - Variáveis CSS
 
+<br />
+
 ## 🧠 Próximos Passos
 - Incluir no site animações com CSS e interações com JavaScript. 
 - Finalizar o Curso de JavaScript Mentorama.
+
+<br />
 
 ## 🔗 Projeto Hospedado no Vercel
 Este projeto está disponível para visualização online através do Vercel. <br />
