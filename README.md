@@ -12,6 +12,8 @@ Enfrentei uma jornada de desafios ao criar este projeto. A responsividade do sit
 
 Cada obstáculo superado representou não apenas uma vitória, mas também um marco em minha jornada de crescimento e aprendizado. Mesmo que a proposta inicial fosse desenvolver apenas duas versões, optei por ir além e criar uma terceira versão para desktop, como uma forma de aprimorar ainda mais minhas habilidades e colocar à prova meu comprometimento.
 
+<br />
+
 ## 📸 Screenshots
 ![Captura de tela](./screen/screen.png)
 
