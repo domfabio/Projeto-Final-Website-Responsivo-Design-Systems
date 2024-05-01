@@ -381,6 +381,10 @@ input[type=date]{
     cursor: pointer;
 }
 
+input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
 select {
     /* trocando ícone dropdown */
     background-image: url(../assets/footer/drop-down-icon.svg);
