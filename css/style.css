@@ -339,7 +339,7 @@ article {
 }
 
 .botao__servico:hover {
-    background-color: var(--white);
+    background-color: var(--white); 
 }
 
 /*----------------FOOTER----------------*/
