@@ -972,7 +972,7 @@ a {
     .footer__container__text {
         display: flex;
         margin-top: 80px;
-        padding-left: 80px;
+        padding-left: 10%;
     }
 
 }
