@@ -163,6 +163,12 @@ nav button:hover {
     border: solid 1px var(--gray);
 }
 
+nav button:active {
+    color: var(--white);
+    background-color: var(--gray-dark);
+    border: solid 1px var(--gray-dark);
+}
+
 /*----------------HERO----------------*/
 
 .hero__content {
