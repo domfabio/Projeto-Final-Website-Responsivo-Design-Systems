@@ -1,20 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-:root {
-    --black: #000000;
-    --white: #FFFFFF;
-    --gray-dark: #30373E;
-    --gray: #ADB5BD;
-    --stroke: #D3D7DB;
-    --bg: #FAFAFA;
-    --purple-dark: #5A27F2;
-    --purple-main: #845EF7;
-    --purple-light: #E1D4FF;
-    --purple-super-light: #F8F5FF;
-    --primary-font: 'Montserrat', sans-serif;
-    --secondary-font: 'Open Sans', sans-serif;
-}
+@import 'variable';
+@import 'placeholder';
+@import 'mixing';
 
 * {
     margin: 0;
@@ -23,16 +12,16 @@
 }
 
 body {
-    font-family: var(--secondary-font);
-    background-color: var(--white);
-    color: var(--dark);
+    font-family: $secondary-font;
+    background-color: $white;
+    color: $dark;
     font-size: 14px;
 }
 
-/*----------------TEXTO----------------*/
+//TEXTO=====================>
 
 .title {
-    font-family: var(--primary-font);
+    font-family: $primary-font;
     font-size: 32px;
     font-weight: 400;
     line-height: 120%;
@@ -55,44 +44,47 @@ body {
     line-height: 180%;
 }
 
-/*----------------BOTÕES----------------*/
+//BOTÕES=====================>
 
 .botao-primary {
-    width: 174px;
-    height: 44px;
-    background-color: var(--purple-main);
-    color: var(--white);
-    font-family: var(--primary-font);
-    font-size: 14px;
-    font-weight: 700;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
+    @extend %estilo-botao-primario;
+    @include button-transition;
 
-.botao-primary:hover {
-    background-color: var(--purple-dark);
+    &:hover {
+        box-shadow: inset $purple-dark 0px 0px 0px 4px;
+    }
+
+    &:active{
+        background-color: $purple-dark;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: $purple-light 0px 0px 0px 4px;
+    }
 }
 
 .botao-secondary {
-    width: 100%;
-    height: 44px;
-    background-color: var(--white);
-    color: var(--purple-main);
-    font-family: var(--primary-font);
-    font-size: 14px;
-    font-weight: 700;
-    border: 1px solid var(--purple-main);
-    border-radius: 8px;
-    cursor: pointer;
-    margin-bottom: 26px;
+    @extend %estilo-botao-secundario;
+    @include button-transition;
+
+    &:hover {
+        color: $purple-dark;
+        border: 1px solid $purple-dark;
+    }
+
+    &:active{
+        background-color: $purple-dark;
+        color: $white;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: $purple-light 0px 0px 0px 4px;
+    }
 }
 
-.botao-secondary:hover {
-    background-color: var(--bg);
-}
-
-/*----------------SECTIONS----------------*/
+//SECTIONS=====================>
 
 section {
     margin-bottom: 24px;
@@ -106,21 +98,75 @@ section {
 }
 
 .section-gray {
-    background-color: var(--bg);
+    background-color: $bg;
     margin: 0;
 }
 
-/*----------------HEADER----------------*/
+//HEADER=====================>
 
 header {
     display: flex;
     width: 100%;
     height: 64px;
-    background-color: var(--purple-super-light);
+    background-color: $purple-super-light;
     border-bottom-left-radius: 32px;
     border-bottom-right-radius: 32px;
     margin-bottom: 15px;
     justify-content: center;
+}
+
+.header__item__burger {
+    width: 24px;
+    height: 17px ;
+    cursor: pointer;
+
+    rect {
+        @include button-transition
+    }
+
+    &:hover rect {
+        fill: $purple-main;
+    }
+    
+}
+
+//animação-logo
+@keyframes girar-horario {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.engrenagem-purple {
+    animation: girar-horario 5s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box; 
+}
+
+@keyframes girar-anti-horario {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.engrenagem-dark {
+    animation: girar-anti-horario 5s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box; 
+}
+//animação-logo
+
+.header__item__search {
+    width: 18px;
+    cursor: pointer;
+
+    path {
+        @include button-transition
+    }
+
+    &:hover path {
+        fill: $purple-main;
+    }
 }
 
 .heder__itens {
@@ -129,10 +175,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-header img {
-    cursor: pointer;
 }
 
 .explain-desktop {
@@ -144,32 +186,34 @@ nav {
     flex-direction: row;
     justify-content: center;
     gap: 2rem;
+
+    button {
+        background-color: transparent;
+        font-family: $primary-font;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: solid 1px $stroke;
+        cursor: pointer;
+        @include button-transition;
+
+        &:hover {
+            color: $white;
+            background-color: $gray;
+            border: solid 1px $gray;
+        }
+
+        &:active {
+            color: $white;
+            background-color: $gray-dark;
+            border: solid 1px $gray-dark;
+        }
+    }
 }
 
-nav button {
-    background-color: transparent;
-    font-family: var(--primary-font);
-    font-size: 16px;
-    font-weight: 700;
-    padding: 10px 12px;
-    border-radius: 8px;
-    border: solid 1px var(--stroke);
-    cursor: pointer;
-}
 
-nav button:hover {
-    color: var(--white);
-    background-color: var(--gray);
-    border: solid 1px var(--gray);
-}
-
-nav button:active {
-    color: var(--white);
-    background-color: var(--gray-dark);
-    border: solid 1px var(--gray-dark);
-}
-
-/*----------------HERO----------------*/
+//HERO=====================>
 
 .hero__content {
     height: 308px;
@@ -178,25 +222,71 @@ nav button:active {
     background-size: cover;
     border-radius: 16px;
     padding: 15px 20px;
+    
+    h1 {
+        width: 260px;
+        font-family: $primary-font;
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 8px;
+        opacity: 0;
+        animation: fade-in-up 1.75s forwards;
+    }
+
+    p {
+        width: 195px;
+        font-family: $secondary-font;
+        font-weight: 600;
+        line-height: 140%;
+        margin-bottom: 24px;
+        opacity: 0;
+        animation: fade-in-up 1.75s forwards;
+    }
+
+    button {
+        animation: fade-in 2s forwards, darken 2s infinite;
+    }
 }
 
-.hero__content h1 {
-    width: 260px;
-    font-family: var(--primary-font);
-    font-size: 24px;
-    font-weight: 800;
-    margin-bottom: 8px;
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.hero__content p {
-    width: 195px;
-    font-family: var(--secondary-font);
-    font-weight: 600;
-    line-height: 140%;
-    margin-bottom: 24px;
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-/*----------------SOBRE----------------*/
+@keyframes darken {
+    0% {
+        background-color: $purple-main;
+    }
+    25% {
+        background-color: $purple-dark;
+    }
+    50% {
+        background-color: $purple-main;
+    }
+    75% {
+        background-color: $purple-dark;
+    }
+    100% {
+        background-color: $purple-main;
+    }
+}
+
+//SOBRE=====================>
 
 .sobre__cards__display {
     display: grid;
@@ -224,13 +314,14 @@ nav button:active {
 .sobre__destak__info {
     width: 100%;
     height: auto;
-    background-color: var(--white);
-    border: 1px solid var(--stroke);
+    background-color: $white;
+    border: 1px solid $stroke;
     border-radius: 16px;
     padding: 15px;
 }
 
 .sobre__card {
+    display: none;
     margin-bottom: 16px;
 }
 
@@ -242,7 +333,30 @@ nav button:active {
     margin-bottom: 16px;
 }
 
-/*----------------COMO----------------*/
+//tabs=================>
+.show{
+    display: block;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 15px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.tab-btn {
+    @extend %estilo-botao-tab;
+    @include button-transition;
+    margin-bottom: -1px;
+}
+
+.tab-btn.active{
+    color: $purple-main;
+    z-index: 1;
+}
+
+//COMO=====================>
 
 .como__imagem {
     width: 100%;
@@ -263,7 +377,7 @@ nav button:active {
     margin: 0;
 }
 
-/*----------------VANTAGENS----------------*/
+//VANTAGENS=====================>
 
 .vantagens__section{
     padding-bottom: 16px;
@@ -278,10 +392,15 @@ nav button:active {
     display: flex;
     width: 100%;
     height: auto;
-    background-color: var(--white);
-    border: 1px solid var(--stroke);
+    background-color: $white;
+    border: 1px solid $stroke;
     border-radius: 16px;
     padding: 15px;
+    @include card-vantagem-transition;
+
+    &:hover {
+        @include card-vantagem-shadow
+    }
 }
 
 .vantagem__card__icone {
@@ -292,7 +411,7 @@ nav button:active {
     margin-left: 16px;
 }
 
-/*----------------SERVIÇOS----------------*/
+//SERVIÇOS=====================>
 
 article {
     margin-bottom: 16px;
@@ -311,14 +430,21 @@ article {
 }
 
 .subtitle__servico {
-    color: var(--purple-dark);
+    color: $purple-dark;
     margin-bottom: 0;
 }
 
 .servico__card__itens {
     border-radius: 0 0 16px 16px;
-    background-color: var(--bg);
+    background-color: $bg;
     padding: 15px;
+    @include article-transition;
+
+    &:hover {
+     @include article-transform
+
+    }
+
 }
 
 .servico__card__cabecalho {
@@ -329,24 +455,120 @@ article {
 }
 
 .botao__servico {
-    background-color: transparent;
-    max-width: 32px;
-    max-height: 32px;
-    margin-bottom: 0;
-    display: flex;
+    @extend %estilo-botao-servico;
+    @include button-transition;
+
+    &:hover {
+        background-color: $purple-main;
+
+        svg path {
+            fill: $white;
+        }
+    }
+
+    &:active {
+        background-color: $purple-dark;
+        border: none;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: $purple-light 0px 0px 0px 4px;
+    }
+}
+
+//modal
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: $bg-modal;
+    display: none;
     align-items: center;
     justify-content: center;
+    z-index: 3;
+    transition: opacity 0.3s ease;
 }
 
-.botao__servico:hover {
-    background-color: var(--white); 
+.modal {
+    width: 50%;
+    height: auto;
+    max-width: 320px;
+    min-width: 280px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 24px;
+    border: 1px solid $stroke;
+    padding: 20px;
+    animation: fade 0.5s ease;
+
+    h3{
+        text-align: center;
+        margin-bottom: 30px;
+        
+    }
+
+    button{
+        width: 100%;
+    }
 }
 
-/*----------------FOOTER----------------*/
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+//nav-menu-burger-mobile-e-tablet
+.menu-burger-container{
+    display: none;
+    background-color: $bg-modal;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    transition: opacity 0.3s ease;
+}
+
+.menu-burger-itens{
+    width: 100vw;
+    background-color: $white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 44px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    animation: fade 0.5s ease;
+}
+
+.nav-burger{
+    flex-direction: column;
+    gap: 1rem;
+
+    button{
+        width: max-content;
+        height: 44px;
+    }
+}
+
+#close-burger{
+    padding-top: 20px;
+    padding-bottom: 33px;
+}
+
+//FOOTER=====================>
 
 footer {
-    background-color: var(--black);
-    color: var(--white);
+    background-color: $dark;
+    color: $white;
     padding-bottom: 40px;
 }
 
@@ -354,7 +576,7 @@ footer {
     padding-top: 15px;
 }
 
-/*--formulário--*/
+//FORMULÁRIO=====================>
 
 form {
     width: 100%;
@@ -365,8 +587,8 @@ form {
 }
 
 ::placeholder {
-    color: var(--gray);
-    font-family: var(--secondary-font);
+    color: $gray;
+    font-family: $secondary-font;
 }
 
 select,
@@ -374,13 +596,20 @@ input[type=date],
 input[type=text],
 input[type=email],
 textarea {
-    height: 52px;
-    border: none;
-    border-radius: 8px;
-    font-family: var(--secondary-font);
-    color: var(--gray);
-    background-color: var(--gray-dark);
-    padding: 14px;
+  height: 52px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Open Sans", sans-serif;
+  color: #ADB5BD;
+  background-color: #30373E;
+  padding: 14px;
+  @include button-transition;
+
+  &:focus {
+    box-shadow: $purple-main 0px 0px 0px 2px;
+    outline: none;
+  }
+
 }
 
 input[type=date]{
@@ -392,7 +621,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 select {
-    /* trocando ícone dropdown */
+    //trocando ícone dropdown
     background-image: url(../assets/footer/drop-down-icon.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - 16px) center;
@@ -432,6 +661,17 @@ label[for="privacidade"] {
     width: 100%;
 }
 
+//animação-formulário
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0px rgba(255, 0, 0, 0.7); }
+    50% { box-shadow: 0 0 25px rgba(255, 0, 0, 0.7); }
+    100% { box-shadow: 0 0 0px rgba(255, 0, 0, 0.7); }
+}
+
+.pulse {
+    animation: pulse 1s infinite;
+}
 
 .text__footer__margin {
     margin-bottom: 32px;
@@ -452,21 +692,34 @@ label[for="privacidade"] {
 ul {
     list-style-type: none;
     padding: 0;
-    font-family: var(--primary-font);
+    font-family: $primary-font;
     font-weight: 700;
 }
 
 li {
     margin-bottom: 12px;
+
+   
 }
 
 a {
     text-decoration: none;
-    color: var(--white);
+    color: $white;
+
+    &:hover {
+        transition: 0.2s;
+        text-decoration: underline;
+        color: $purple-main;
+    }
 }
 
 #footer__list__vantagens {
-    color: var(--purple-main);
+    color: $purple-main;
+
+    &:hover {
+        transition: 0.2s;
+        color: $purple-dark;
+    }
 }
 
 .footer__socials {
@@ -475,10 +728,46 @@ a {
     flex-direction: row;
     cursor: pointer;
     gap: 24px;
+
+    svg {
+
+        path {
+            transition: fill 0.2s ease-in-out; 
+        }
+
+        &:hover path {
+            fill: $purple-main;
+            transition: fill 0.2s ease-in-out; 
+        }
+    }
 }
 
 
 @media screen and (min-width: 768px){
+
+    .menu-burger-itens{
+        width: 420px;
+        padding: 0 50px 50px 50px;
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+    }
+    
+    .nav-burger{
+        gap: 40px;
+    
+        button{
+            width: max-content;
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 58px;
+        }
+    }
+    
+    #close-burger{
+        width: 24px;
+        padding-top: 22px;
+        padding-bottom: 66px;
+    }
 
     section {
         margin-bottom: 50px;
@@ -498,6 +787,7 @@ a {
 
     .header__item__burger {
         width: 30px;
+        height: 22px;
     }
 
     .heder__item__logo {
@@ -507,6 +797,7 @@ a {
 
     .header__item__search {
         width: 24px;
+        height: 24px;
     }
 
     .hero__imagem {
@@ -518,25 +809,26 @@ a {
         height: 662px;
         border-radius: 24px;
         background-position: left;
+        background-attachment: fixed;
         padding: 40px;
+    
+        h1 {
+            width: 400px;
+            font-family: $primary-font;
+            font-size: 72px;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+    
+        p {
+            width: 367px;
+            margin-bottom: 48px;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 130%;
+        }
     }
-
-    .hero__content h1 {
-        width: 400px;
-        font-family: var(--primary-font);
-        font-size: 72px;
-        font-weight: 800;
-        margin-bottom: 24px;
-    }
-
-    .hero__content p {
-        width: 367px;
-        margin-bottom: 48px;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 130%;
-    }
-
+    
     .botao-primary {
         width: 205px;
         height: 58px;
@@ -600,6 +892,10 @@ a {
         width: 108px;
         margin: 0;
         font-size: 18px;
+    }
+
+    .tab-buttons {
+        display: none;
     }
 
     .sobre__card {
@@ -804,13 +1100,14 @@ a {
         margin-bottom: 50px;
     }
 
+    .heder__item__logo{
+        width: 106px;
+        height: 48px;
+    }
+
     .logo__nav{
         display: flex;
         gap: 7em;
-    }
-
-    .hero__content h1 {
-        width: 837px;
     }
 
     .hero__content {
@@ -819,10 +1116,15 @@ a {
         background-size: cover;
         border-radius: 16px;
         padding: 100px 80px;
-    }
 
-    .hero__content p {
-        width: 680px;
+        h1 {
+            width: 837px;
+        }
+
+        & p {
+            width: 680px;
+        }
+        
     }
 
     .sobre__section {
@@ -842,6 +1144,10 @@ a {
 
     .sobre-destak {
         height: auto;
+    }
+
+    .tab-buttons {
+        display: none;
     }
 
     .sobre__card,

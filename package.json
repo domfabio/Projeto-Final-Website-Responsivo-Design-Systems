@@ -1,0 +1,19 @@
+{
+  "name": "projeto-final-website-responsivo-design-systems",
+  "version": "1.0.0",
+  "description": "Este é o projeto final do Curso de Desenvolvimento de Layout em Front-end da Mentorama: Design Systems, trata-se de um site criado para uma imobiliária, otimizado para as versões Mobile, Tablet e Desktop.",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass src/scss/style.scss:dist/style.css",
+    "dev": "sass --watch --color src/scss/style.scss:dist/style.css"
+  },
+  "keywords": [
+    "design",
+    "systems"
+  ],
+  "author": "Fabio",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.77.1"
+  }
+}

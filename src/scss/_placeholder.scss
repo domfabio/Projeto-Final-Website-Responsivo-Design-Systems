@@ -1,0 +1,56 @@
+//BOTÕES
+
+%estilo-botao {
+  font-family: $primary-font;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+%estilo-botao-primario {
+  @extend %estilo-botao;
+  width: 174px;
+  height: 44px;
+  background-color: $purple-main;
+  color: $white;
+  border: none;
+}
+
+%estilo-botao-secundario {
+  @extend %estilo-botao;
+  width: 100%;
+  height: 44px;
+  background-color: transparent;
+  color: $purple-main;
+  border: 1px solid $purple-main;
+  margin-bottom: 26px;
+}
+
+%estilo-botao-servico {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $purple-main;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+%estilo-botao-tab {
+  width: 100%;
+  height: 44px;
+  border: none;
+  color: $gray;
+  font-family: $primary-font;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: $white;
+  border: 1px solid $stroke;
+  border-bottom: 0;
+  border-radius: 16px 16px 0px 0px;
+  padding: 8px;
+  cursor: pointer;
+}
