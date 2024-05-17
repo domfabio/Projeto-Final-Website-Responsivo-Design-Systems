@@ -43,7 +43,7 @@ Cada obstáculo superado representou não apenas uma vitória, mas também um ma
 - Animações e Transições com CSS
 - Ambiente de Desenvolvimento (Node.Js - NPM)
 - Automação com SASS
-- SCSS (Mixing, Placeholder, Variáveis e Componentes)
+- SCSS (Mixin, Placeholder, Variáveis e Componentes)
 - Interatividade com Java Script
 
 <br />
