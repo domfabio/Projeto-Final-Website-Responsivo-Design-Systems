@@ -6,13 +6,13 @@ Este é o projeto final do Curso de Desenvolvimento de Layout em Front-end da Me
 
 ## 👨🏾‍💻 Desafios do Projeto:
 
-<h4> Parte 1 (Desenvolvimento e Estilização)</h4>
+<h3> Parte 1 (Desenvolvimento e Estilização)</h3>
 Enfrentei na primeira etapa do desenvolvimento do site uma jornada de desafios ao criar este projeto. A responsividade do site com Media Queries exigiu esforço em cada etapa. Porém, foi ao mergulhar no complexo mundo do CSS Grid, aplicando diferentes templates para cada versão, que me vi diante de um verdadeiro quebra-cabeça, desafiando minha criatividade e expertise.
 
-<h4> Parte 2 (Automatização e Interatividade) </h4>
+<h3> Parte 2 (Automatização e Interatividade) </h3>
 Na segunda etapa, configurei o ambiente de desenvolvimento com Node.js através do NPM, instalando todas as dependências necessárias. Utilizei SASS para automatizar o CSS, empregando mixins, placeholders e variáveis para manter a consistência e reutilização dos estilos. Além disso, implementei animações e transições para uma experiência de usuário mais dinâmica, e adicionei interações usando JavaScript para melhorar a funcionalidade do site.
 
-<br />
+######
 
 Cada obstáculo superado representou não apenas uma vitória, mas também um marco em minha jornada de crescimento e aprendizado. Mesmo que a proposta inicial fosse desenvolver apenas duas versões, optei por ir além e criar uma terceira versão para desktop, como uma forma de aprimorar ainda mais minhas habilidades e colocar à prova meu comprometimento.
 
