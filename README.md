@@ -27,7 +27,7 @@ Cada obstáculo superado representou não apenas uma vitória, mas também um ma
 
 - HTML5
 - CSS3
-- Java Script
+- JavaScript
 
 <br />
 
@@ -44,7 +44,7 @@ Cada obstáculo superado representou não apenas uma vitória, mas também um ma
 - Ambiente de Desenvolvimento (Node.Js - NPM)
 - Automação com SASS
 - SCSS (Mixin, Placeholder, Variáveis e Componentes)
-- Interatividade com Java Script
+- Interatividade com JavaScript
 
 <br />
 
