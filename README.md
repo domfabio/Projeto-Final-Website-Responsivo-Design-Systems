@@ -4,9 +4,13 @@ Este é o projeto final do Curso de Desenvolvimento de Layout em Front-end da Me
 
 <br />
 
-## 👨🏾‍💻 Desafio do Projeto
- 
-Enfrentei uma jornada de desafios ao criar este projeto. A responsividade do site com Media Queries exigiu esforço em cada etapa. Porém, foi ao mergulhar no complexo mundo do CSS Grid, aplicando diferentes templates para cada versão, que me vi diante de um verdadeiro quebra-cabeça, desafiando minha criatividade e expertise.
+## 👨🏾‍💻 Desafios do Projeto:
+
+<h4> Parte 1 (Desenvolvimento e Estilização)</h4>
+Enfrentei na primeira etapa do desenvolvimento do site uma jornada de desafios ao criar este projeto. A responsividade do site com Media Queries exigiu esforço em cada etapa. Porém, foi ao mergulhar no complexo mundo do CSS Grid, aplicando diferentes templates para cada versão, que me vi diante de um verdadeiro quebra-cabeça, desafiando minha criatividade e expertise.
+
+<h4> Parte 2 (Automatização e Interatividade) </h4>
+Na segunda etapa, configurei o ambiente de desenvolvimento com Node.js através do NPM, instalando todas as dependências necessárias. Utilizei SASS para automatizar o CSS, empregando mixins, placeholders e variáveis para manter a consistência e reutilização dos estilos. Além disso, implementei animações e transições para uma experiência de usuário mais dinâmica, e adicionei interações usando JavaScript para melhorar a funcionalidade do site.
 
 <br />
 
@@ -15,7 +19,7 @@ Cada obstáculo superado representou não apenas uma vitória, mas também um ma
 <br />
 
 ## 📸 Screenshots
-![Captura de tela](./screen/screen.png)
+![Captura de tela](./public/screen/screen.png)
 
 <br />
 
@@ -23,10 +27,11 @@ Cada obstáculo superado representou não apenas uma vitória, mas também um ma
 
 - HTML5
 - CSS3
+- Java Script
 
 <br />
 
-## 🏆 Aprendizado 
+## 🏆 Aprendizados 
 
 - Mobile First
 - Responsividade
@@ -35,11 +40,16 @@ Cada obstáculo superado representou não apenas uma vitória, mas também um ma
 - CSS Grid
 - Media Query
 - Variáveis CSS
+- Animações e Transições com CSS
+- Ambiente de Desenvolvimento (Node.Js - NPM)
+- Automação com SASS
+- SCSS (Mixing, Placeholder, Variáveis e Componentes)
+- Interatividade com Java Script
 
 <br />
 
 ## 🧠 Próximos Passos
-- Incluir no site animações com CSS e interações com JavaScript. 
+
 - Finalizar o Curso de JavaScript Mentorama.
 
 <br />
